@@ -19,4 +19,11 @@ __pycache__/
 *.log
 
 # Dossiers de résultats intermédiaires (optionnel)
-donnees_nettoyees/ 
+donnees_nettoyees/ *.csv.gz
+*.parquet
+data/raw/
+donnees_nettoyees/
+*.csv.gz
+*.parquet
+data/raw/
+donnees_nettoyees/
