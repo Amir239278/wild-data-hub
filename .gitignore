@@ -1,0 +1,22 @@
+# Environnements virtuels
+venv/
+.env/
+
+# Fichiers temporaires
+*.pyc
+__pycache__/
+.DS_Store
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Données volumineuses ou sensibles
+*.parquet
+*.sqlite
+*.db
+
+# Fichiers de logs
+*.log
+
+# Dossiers de résultats intermédiaires (optionnel)
+donnees_nettoyees/ 

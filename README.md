@@ -1,46 +1,51 @@
-# Analyse des Transactions Immobilières DVF
+# Analyse des Transactions Immobilières (DVF)
 
-Ce projet analyse les données DVF (Demandes de Valeurs Foncières) de la DGFiP pour comprendre les tendances du marché immobilier.
+Ce projet vise à analyser les transactions immobilières issues du fichier DVF (Demandes de Valeurs Foncières) en France.
 
-## Structure du Projet
+## Structure du projet
 
-- `dvf.csv.gz` : Données brutes des transactions immobilières
-- `analyse_dvf.py` : Script d'analyse des données
-- `requirements.txt` : Dépendances Python nécessaires
-
-## Installation
-
-1. Créer un environnement virtuel Python :
-```bash
-python -m venv venv
-source venv/bin/activate  # Sur Unix/MacOS
+```
+Projet-3/
+│
+├── data/
+│   ├── raw/                # Données brutes (ex: dvf.csv.gz)
+│   └── processed/          # Résultats d'analyse (transactions_groupées_resumé.csv)
+│
+├── notebooks/              # Notebooks Jupyter pour exploration
+│
+├── scripts/                # Scripts Python pour traitement et analyse
+│   └── transactions_groupées.py
+│
+├── rapports/               # Graphiques, rapports, visualisations
+│
+├── README.md               # Présentation du projet
+└── requirements.txt        # Dépendances Python
 ```
 
-2. Installer les dépendances :
+## Lancer l'analyse
+
+1. Placez le fichier `dvf.csv.gz` dans `data/raw/`.
+2. Exécutez le script principal :
+   ```bash
+   python3 scripts/transactions_groupées.py
+   ```
+3. Les résultats seront générés dans `data/processed/` et les graphiques dans `rapports/`.
+
+## Dépendances
+- pandas
+- numpy
+- matplotlib
+- seaborn
+
+Installez-les avec :
 ```bash
 pip install -r requirements.txt
 ```
 
-## Utilisation
+## Objectif
+- Nettoyer et structurer les données DVF
+- Analyser les transactions groupées (ventes en bloc)
+- Générer des statistiques et des visualisations
 
-Pour exécuter l'analyse :
-```bash
-python analyse_dvf.py
-```
-
-## Données
-
-Les données DVF contiennent les informations suivantes :
-- Valeur foncière
-- Type de local
-- Surface
-- Date de mutation
-- Localisation
-- Et plus encore...
-
-## Analyse
-
-Le script `analyse_dvf.py` génère :
-- Des statistiques descriptives sur les transactions
-- Des visualisations de la distribution des prix
-- Une analyse par type de local 
+## Auteur
+Meraka Amir 
