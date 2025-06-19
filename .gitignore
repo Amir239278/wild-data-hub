@@ -27,3 +27,7 @@ donnees_nettoyees/
 *.parquet
 data/raw/
 donnees_nettoyees/
+*.csv.gz
+*.parquet
+data/raw/
+donnees_nettoyees/
