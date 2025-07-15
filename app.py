@@ -4,6 +4,27 @@ from streamlit_folium import st_folium
 
 st.set_page_config(page_title="Estimation immobilière", page_icon="🏡")
 
+# Sidebar avec informations
+with st.sidebar:
+    st.markdown("### 📊 Informations")
+    st.markdown("""
+    - **Modèle** : IA hybride  
+    - **Sources** : Données DVF (data.gouv) & Observatoire des territoires  
+    - **Mise à jour** : Semestrielle 
+    - **Précision** : ±15%  
+    """)
+
+    st.markdown("### 🛠️ Fonctionnalités")
+    st.markdown("""
+    - Estimation par adresse  
+    - Analyse géographique  
+    - Comparaison de prix  
+    - Tendances du marché  
+    """)
+
+
+
+
 st.title("🏘️ Où acheter et à quel prix ?")
 
 # Création des onglets
@@ -62,9 +83,9 @@ with onglet_carte:
             st.components.v1.html(f.read(), height=650, scrolling=False)
 
     # Explication du score en bas
-    st.markdown("### ℹ️ Méthodologie du score d’attractivité")
+    st.markdown("### ℹ️ Méthodologie du rang d’attractivité")
     st.write("""
-    Le **score d’attractivité** est un indicateur calculé à partir de plusieurs critères socio-économiques et immobiliers à l’échelle départementale :
+    Le **rang d’attractivité** est un indicateur calculé à partir de plusieurs critères socio-économiques et immobiliers à l’échelle départementale :
 
     - L'évolution de la population d'ici 2070
     - Les revenus médians
