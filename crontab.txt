@@ -1,0 +1,1 @@
+0 0 1 1,7 * /usr/local/bin/python /app/collecte_dvf.py >> /app/dataset/dvf.log 2>&1
